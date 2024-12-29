@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="2_CSS.css">
+</head>
+<body>
+    <h4 style="text-align: center;">Universal(*) / Body(body) / Element(p/h4/span...) Selectors</h4>
+    <h3>Hello Guys</h3>
+    <h3>Hello Guys</h3>
+
+    <hr>
+    <h4 style="text-align: center;">id selector (#)</h4>
+    <p id="one">Let's check by ID</p>
+
+    <hr>
+    <h4 style="text-align: center;">class selector (.)</h4>
+
+    <h2 class="two">Check for class</h2>
+    <p class="two">Check for class</p>
+
+    <div class="two">
+        <h2>Check for class</h2>
+        <p>Check for class</p>
+    </div>
+
+    <p class="circular">Check for class</p>
+
+    <hr>
+    <h4 style="text-align: center;">Selector List ( h2,p{...} )</h4>
+
+    <p class="SL">Example of Selector list</p>
+    <p class="SelLi">Example of Selector list</p>
+
+    <hr>
+
+    <h4 style="text-align: center;">Decendent Selectors ( p i{...} )</h4>
+    <ol>
+        <li><a href="">Link-1</a></li>
+        <li><a href="">Link-2</a></li>
+        <li>Text-1</li>
+        <li>Text-2</li>
+    </ol>
+    <a href="">Link-3</a>
+
+    <p>
+        <strong>
+            <em>This is also example of Decendent Selector</em>
+        </strong>
+    </p>
+
+    <hr>
+    <h4 style="text-align: center;">Direct Child Selector ( b>i{...} )</h4>
+
+    <p>
+        <b>
+            <u>
+                <i>This "i" is not direct child of "b"</i>
+            </u>
+        </b>
+    </p>
+
+    <p>
+        <u>
+            <b>
+                <i>This "i" is direct child of "b"</i>
+            </b>
+        </u>
+    </p>
+
+    <i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, in.</i>
+
+    <hr>
+    <h4 style="text-align: center;">Box model in CSS (padding, margin)</h4>
+    <p class="box-model">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, ut!</p>
+
+    <hr>    
+    
+    <h4 style="text-align: center;">Display in CSS (Block, Inline, inline-block)</h4>
+    <div>
+        <div class="block">Let's explore Display property in CSS -> block</div>
+        <div class="inline">Let's explore Display property in CSS -> inline</div>
+        <div class="inline-block">Let's explore Display property in CSS -> inline-block</div>
+    </div>
+
+    <hr>
+
+    <h4 style="text-align: center;">Position in CSS (default/static, relative, absolute, fixed, sticky)</h4>
+    <p class="staticPosi">Let's learn about "Static" poistion in css (there is no effect of left, right, bottom, up and it will not colide with other element)</p>
+    <p class="relativePosi">Let's learn about "Relative" poistion in css (It can collide)</p>
+
+    <hr>
+    <p class="fixedPosi">Let's learn about "Fixed" poistion in css (It will fixed)</p> 
+    <br><br>
+
+    <div id="parent">
+        <p class="absolutePosi">"Absolute" poistion should be child of "Relative" parent</p>
+    </div>
+
+    <p class="stickyPosi">"Sticky" poistion in css : (It will fixed after reaching a top/bottom/left/right)</p>
+    <p class="stickyPosi">"Sticky" poistion: For right position there is something else => Becoz right will work only when you have enough content to scroll right side </p>
+
+    <hr>
+
+    <h4 style="text-align: center;">Let's learn about Pseudo Class</h4>
+    <span>Put cursor on these buttons 😃 &#128526: </span>
+    <button class="progress" >cursor: progress</button>
+    <button class="pointer" >cursor: pointer</button>
+    <br><br>
+    <button class="hover">hover (hover)</button> &nbsp;
+    <button class="active">active (click)</button> &nbsp;
+    <button class="focus">focus (click)</button>
+    <br><br>
+    
+    <a href="https://www.gpt.com/" target="_blank" class="link">link (link)</a> &nbsp;
+    <a href="https://www.cuims.com/" class="visited" target="_blank">active (click)</a> &nbsp;
+    <a href="https://www.cuims.com/" class="linkHover" target="_blank">hover (hover)</a> &nbsp;
+    <span>To remove these small dots(front-below to link) use list</span>
+    <br><br>
+
+    <div class="box">
+        <p>.box p:first-child</p>
+        <p>Box 2</p>
+        <p>Box 3</p>
+        <p>Box 4</p>
+        <p>.box p:nth-child(5)</p>
+        <p>Box 6</p>
+        <p>Box 7</p>
+        <p>Box 8</p>
+        <p>.box p:last-child</p>
+    </div>
+    <br><hr>
+
+    <h4 style="text-align: center;">Pseudo Elements <br> (It is use bcoz company don't give direct HTML code to junior developers)</h4>
+        <p class="pseudoElements">me and</p>
+
+    <div class="shape"></div>
+    <br><hr>
+
+    <h4 style="text-align: center;">Flex Box</h4>
+    <h5 style="text-align: center;">"By Default, it's in Row"</h5>
+    <div class="parent"> 
+        <p>(Parent) display:flex => By default it's in row && justify-content: flex-end  => By default it's flex-start</p>
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child4">4 (flex=2)</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="demo1_div">demo1:div</div>
+    </div>
+    <br>
+    <div class="demo1_div">demo1:div</div>
+    <br>
+    <div style="text-align: center;">(Important observation: here both "demo1:div" are same. But still different color. Means, Parent color(red) is still below all child colors)</div>
+    <h5 style="text-align: center;">|<br>|<br>(column)<br>|<br>V</h5>
+
+    <div class="vParent"> 
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child4">4 (flex=2)</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="demo1_div">demo1:div</div>
+        <p style="text-align: center;">(Parent) display:flex => By default it's in row</p>
+    </div>
+
+    <h5 style="text-align: center;">Although, we have media queries but flex boxes should be responsive <br> (try to inspect it and compare with above)</h5>
+
+    <div class="responsiveParent"> 
+        <p>(Parent) flex-wrap: wrap;</p>
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child4">4 (flex=2)</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="demo1_div">demo1:div</div>
+    </div>
+
+    <br>
+    <h5 style="text-align: center;">Fully responsive (here box will come at center as responsive)</h5>
+
+    <div class="fullyResponsiveParent"> 
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+    </div>
+
+    <br><hr>
+
+    <h4 style="text-align: center;">Animations 😎</h4>
+
+    <div class="animationButtonContainer">
+        <button class="delay">Submit <br> transition-duration: 1s;</button>
+        <button class="duration">Submit <br> transition-duration: 1s;</button>
+        <button class="ease-in">Submit <br> transition-duration: 1s;</button>
+    </div>
+
+    <br>
+
+    <div class="box">
+        <div class="ball">@keyframes</div>
+        <div class="text">
+            Class: box & ball <br> <br>
+            .ball:hover { <br>
+                animation: ballMovement 5s ease-in-out forwards; <br>
+            } <br>
+            @keyframes ballMovement { <br>
+                15%{ <br>
+                    transform: translate(400px,0px); <br>
+                } <br>
+            }
+        <br> </div>
+    </div>
+
+    <br><hr>
+    <h4 style="text-align: center;">Media Queries</h4>
+    <div class="media"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, sed deleniti nobis laborum reprehenderit unde ducimus modi quod temporibus exercitationem autem dolor quis rerum placeat nulla aliquam quisquam labore voluptate, adipisci culpa. Veritatis error officia explicabo beatae, voluptas porro dignissimos culpa laboriosam exercitationem, cumque aspernatur minus reprehenderit illo consequatur eveniet voluptatum illum! Corporis illum esse sit soluta deleniti quae perferendis eveniet, rem est, consequatur labore incidunt aliquam culpa ea dolorem minus maxime voluptatum odio iste quia officia quibusdam. Similique commodi <b>Try to inspect it's size 😎</b> consequatur, mollitia aliquid eos enim saepe, adipisci nisi necessitatibus voluptate ea nobis vitae ipsum nulla ratione. <br><br>
+    <b> @media screen and (max-width: 400px){...} <br>
+    max-width => atmost <br>
+    min-width => atleast
+</b></div>
+<hr>
+
+<h4 style="text-align: center;">Git Commands</h4>
+<p>It is distributed (It's on the cloud) <br> Recovery <br> Tracking Changes <br> Collaborations</p>
+<p style="text-align: center;">Push (My local PC --> Global Git Account) <br> Pull (My local PC <-- Global Git Account)</p>
+<p>git.status (to check status)<br>Staging (It make your code changes ready to upload on git) <br>git add. (All files within the folder) <br> git.add index.html style.css... (html/css files within the folder)</p>
+<p><strong>Termonlogy</strong> <br> commit -m => commitment message <br> -u => upstream</p>
+<p><strong>Steps for git...</strong><br>1. git init <br>2. git add . <br> 3. git status <br>4. git commit -m "any message you want to give" <br>5. git branch -M main <br>6. git remote add origin https://github.com/Deepak7200/repoName.git <br>7. git push -u origin main <br> 8. git pull // we use it to pull updated code from git(cloud) to local machine(vsCode) <br> 9. git checkout -b setup // create new branch named "setup" <br>10. git checkout master // to move on other branch</p>
+<p><strong>Push an existing repository from the command line</strong> <br> 1. git remote add origin https://github.com/Deepak7200/delete.git <br> 2. git branch -M main <br> 3. git push -u origin main <br><br></p>
+
+<p><strong>BEM Methodolgy: </strong> <br> 1. https://getbem.com/ <br> 2. Used for creating a user variable in technical term <br> 3. Use those names effectively in multiple sections (Reusable/Reusing the Variable Name) <br> i.e, <br> Let suppose, me as senior working on header with class name "buttons". And my junior working on content section with class "buttons". <br>So, to remove this conflict we use "BEM Approach" and give class name like <br> section1__buttons_body <br> section2__buttons_body <br><br>NOTE: It's a methodoly like camel case we can also use -> sec1ButtonsBody and sec2ButtonsBody </p>
+<br>
+<p><strong>Project Deployment</strong> <br> 1. Goto Github <br> 2. Click on Repo <br> 3. Click on Setting <br> 4. Click on Pages (left side in code and automation section) <br> 5. Choose branch (either latest updated or master) <br> 6. Click on Save <br> 7. Goto Code in Repo <br> 8. Wait for green tick on Project Deployment <br> 9. Go Right side below and check out Depolyments <br> 10. Click on Github pages <br></p>
+<hr>
+<h4 style="text-align: center;">Grid in CSS</h4>
+<p style="text-align: center;"> (Responsiveness: You can try to inspect it, it will automatically manage it's size) <br> <strong>display:grid;</strong> <br><br> 1. grid-template-columns: repeat(3,1fr); <br> grid-template-rows: repeat(2,1fr); <br> // fr -> fraction</p>
+
+<div class="gridContainer_1">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, natus quos ea alias dolore eveniet, autem doloremque voluptatibus! Explicabo placeat maxime officia exercitationem doloribus, ab, ducimus nam, eos harum beatae totam!</div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+</div>
+
+<br>
+<p style="text-align: center;"> 2. grid-template-columns: auto auto auto auto; <br> grid-template-rows: auto auto; </p>
+
+<div class="gridContainer_2">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, natus quos ea alias dolore eveniet, autem doloremque voluptatibus! Explicabo placeat maxime officia exercitationem doloribus, ab, ducimus nam, eos harum beatae totam!</div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+</div>
+
+<br>
+<p style="text-align: center;"> 3. grid-template-columns: 200px 400px 600px; <br> grid-template-rows: 150px 100px; </p>
+<div class="gridContainer_3">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, natus quos ea alias dolore eveniet, autem doloremque voluptatibus! Explicabo placeat maxime officia exercitationem doloribus, ab, ducimus nam, eos harum beatae totam!</div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+</div>
+
+<p style="text-align: center;"> # grid-template: 200px 400px / repeat(3,1fr); <br>// grid-template: row / column;</p>
+<div class="gridContainer_4">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, natus quos ea alias dolore eveniet, autem doloremque voluptatibus! Explicabo placeat maxime officia exercitationem doloribus, ab, ducimus nam, eos harum beatae totam!</div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+</div>
+
+<p style="text-align: center;"> <strong>Project</strong> <br>grid-template-areas </p>
+<div class="gridProject">
+    <div class="header">1:header</div>
+    <div class="mainContent">2:mainContent</div>
+    <div class="sideBar">3:sideBar</div>
+    <div class="footer">4:footer</div>
+</div>
+
+<br>
+
+<p style="text-align: center;"><strong>Spacing</strong> <br> grid-column-gap: 10px; <br> grid-row-gap: 10px; <br> /or/ grid-gap: 10px 10px; </p>
+<div class="gridContainer_5">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, natus quos ea alias dolore eveniet, autem doloremque voluptatibus! Explicabo placeat maxime officia exercitationem doloribus, ab, ducimus nam, eos harum beatae totam!</div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+</div>
+
+<br>
+
+<p style="text-align: center;"><strong>Alignment</strong> <br> justify-content:space-around; <br> align-content: end; <br> /or/ left, center, right, space-between, space-around etc. </p>
+<div class="gridContainer_6">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, natus quos ea alias dolore eveniet, autem doloremque voluptatibus! Explicabo placeat maxime officia exercitationem doloribus, ab, ducimus nam, eos harum beatae totam!</div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+</div>
+
+<br>
+
+<p style="text-align: center;"> justify-items: space-around; <br> align-items: end; <br> /or/ left, center, right, space-between, space-around etc. </p>
+<div class="gridContainer_7">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, natus quos ea alias dolore eveniet, autem doloremque voluptatibus! Explicabo placeat maxime officia exercitationem doloribus, ab, ducimus nam, eos harum beatae totam!</div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+</div>
+
+<br>
+
+<p style="text-align: center;"> grid-auto-rows:50px <br> grid-auto-columns:50px <br> /or/ left, center, right, space-between, space-around etc. <br> // we use it if our system get more row and columns as defined</p>
+<div class="gridContainer_8">
+    <div>1:</div>
+    <div>2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates quam omnis ratione praesentium veniam expedita ad rerum! Omnis sequi expedita at error ducimus modi fugit aliquam animi sed, </div>
+    <div>3: Lorem ipsum dolor sit </div>
+    <div>4: Lorem, ipsum dolor sit amet consectetur adipisicing</div>
+    <div>5: hello</div>
+    <div>6:</div>
+    <div>7: hello</div>
+    <div>8:</div>
+</div>
+<br>
+<p style="text-align: center;"> grid-auto-flow:column; <br> /or/ grid-auto-flow:row; <br> // items fill row wise or column wise</p>
+<div class="gridContainer_9">
+    <div>1:</div>
+    <div>2:</div>
+    <div>3:</div>
+    <div>4:</div>
+    <div>5:</div>
+    <div>6:</div>
+</div>
+
+<br><p style="text-align: center;"><strong>Grid item properites</strong></p>
+
+<p style="text-align: center;"> grid-column-start: 1; <br> grid-column-end: 3; <br> /or/ grid-column: 1/3;  <br><br> grid-row-start: 1; <br> grid-row-end: 3; <br> /or/ grid-row: 1/3; <br> // Changes on Grid-item level</p>
+<div class="gridContainer_10">
+    <div class="item-1">1</div>
+    <div class="item-2">2</div>
+    <div class="item-3">3</div>
+    <div class="item-4">4</div>
+</div>
+
+<br><p style="text-align: center;"><strong>Order of grid items</strong></p>
+<p style="text-align: center;"> order:1  <br> /or/ 2,3,4,5,6; </p>
+
+<div class="gridContainer_11">
+    <div class="item-1">1</div>
+    <div class="item-2">2</div>
+    <div class="item-3">3</div>
+    <div class="item-4">4</div>
+    <div class="item-5">5</div>
+    <div class="item-6">6</div>
+</div>
+<br>
+<br><p style="text-align: center;"><strong>Alignment</strong></p>
+<p style="text-align: center;">  justify-self: left; /or/ center, right <br> align-self: end; /or/ start, center </p>
+
+<div class="gridContainer_12">
+    <div class="item-1">1</div>
+    <div class="item-2">2</div>
+    <div class="item-3">3</div>
+    <div class="item-4">4</div>
+    <div class="item-5">5</div>
+    <div class="item-6">6</div>
+</div>
+<br>
+<h4 style="text-align: center;">Box and Text Shadow</h4>
+<div class="container">
+    <div class="card" id="card-1">
+       <h2> Card-1 </h2>
+       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo aspernatur at deleniti. Minus excepturi omnis non, veniam ratione vel! Aliquid nemo, reprehenderit ducimus illum dolorem, eum veritatis, possimus vel dolores repellendus deleniti! Tempora, veritatis?</p>
+    </div>
+    <div class="card" id="card-2">
+       <h2> Card-2 </h2>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ratione pariatur ipsa sit commodi nihil officia ipsam, maiores necessitatibus impedit neque quam dicta rem est corporis reiciendis praesentium, vitae repellendus nemo numquam alias! Facilis.</p>
+
+    </div>
+    <div class="card" id="card-3">
+       <h2> Card-3 </h2>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ratione pariatur ipsa sit commodi nihil officia ipsam, maiores necessitatibus impedit neque quam dicta rem est corporis reiciendis praesentium, vitae repellendus nemo numquam alias! Facilis.</p>
+
+    </div>
+</div>
+
+</body>
+</html>
