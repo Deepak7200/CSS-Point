@@ -1,0 +1,685 @@
+*{
+    box-sizing: border-box; /*  We use it, because box not collide with each other during giving Padding & Margin */
+}
+
+
+/* If we choose "h3" instead of "*"(universal) or "body" then it's called Element Selector */
+h3{
+    color: rgb(0, 38, 255);
+    background-color: rgb(0, 255, 21);
+    border: 5px solid blueviolet; /* solid/dotted/deshed */
+    border-radius: 5px;
+}
+
+/* There will different borders in case of *,h3,body
+Logic: * => (3 borders) => 1. Entire HTML 2. Body 3. H3 
+       h3 => (1 borders of each h3)
+       body => (1 border for entire stuff) 
+*/
+
+/* Class and Id */
+#one{
+    color: rgb(21, 20, 21);
+    background-color: rgb(255, 13, 0);
+    border: 5px solid blueviolet; /* can choose between solid/dotted/deshed */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.two{
+    color: rgb(0, 38, 255);
+    background-color: rgb(200, 255, 0);
+    border: 5px solid rgb(43, 195, 226);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.circular{
+    color: rgb(255, 0, 0);
+    background-color: rgb(113, 234, 224);
+    border:solid 5px  rgb(0, 17, 255);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* df */
+.SL, .SelLi{
+    color: antiquewhite;
+    background-color: chocolate;
+}
+
+/* Descendent Selector -> parent child { } */
+li a{
+    color: rgb(255, 255, 255);
+    background-color: blueviolet;
+}
+
+p em{
+    color: rgb(249, 6, 6);
+    background-color: rgb(43, 226, 52);
+}
+
+/* Direct child selector -> parent > direct child { } */
+b>i{ /* It will not work for "p>i" */
+    color: rgb(249, 6, 6);
+    background-color: rgb(43, 226, 52);
+}
+
+/* Box model:
+Padding : Internal to box
+Margin : Enternal to box
+*/
+.box-model{
+    color: blue;
+    background-color: rgb(255, 255, 0);
+    padding: 10px 20px 10px 30px; /* Top Right Bottom Left */
+    /* padding-left: 10px; */
+    /* padding: 10px 0 0 0; */
+    padding: 10px 20px; /* Top/Bottom Left/Right */
+    margin: 50px;
+}
+
+.block{
+    color: rgb(25, 0, 255);
+    background-color: rgb(248, 136, 136);
+    border: 2px solid black;
+    display: block;
+}
+.inline{
+    color: rgb(25, 0, 255);
+    background-color: rgb(248, 136, 136);
+    border: 2px solid black;
+    display: inline;
+}
+.inline-block{
+    color: rgb(25, 0, 255);
+    background-color: rgb(248, 136, 136);
+    border: 2px solid black;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+}
+
+.staticPosi{
+    color: aqua;
+    background-color: black;
+    position: static; /* It's default. So, it's OK if you don't write it. */
+    padding-top: 10px;
+    top: 50px; /* Not work */
+    left: 50px; /* Not work */
+}
+
+.relativePosi{
+    color: aqua;
+    background-color: black;
+    position: relative;
+    padding-top: 10px;
+    top: 25px;
+    left: 150px;
+    width: 88%;
+}
+
+.fixedPosi{
+    color: aqua;
+    background-color: black;
+    position: fixed;
+    padding-top: 10px;
+    top: 5px;
+    right: 50px;
+}
+
+#parent{
+    position: relative;
+    border: 2px dashed purple;
+    height: 60px;
+    margin-left: 200px;
+}
+
+.absolutePosi{
+    position: absolute;
+    left: 50px;
+    height: 30px;
+    color: aqua;
+    background-color: black;
+}
+
+.stickyPosi{
+    position: sticky;
+    bottom: 10px;
+    left: calc(100% - 40% - 50px); /* 100% width - element width - desired right offset */
+    color: aqua;
+    background-color: black;
+    width: 40%;
+}
+
+.linkHover, .progress{
+    cursor: progress;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 255, 119, 0.409);
+}
+
+.pointer{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 255, 119, 0.409);
+}
+
+.hover:hover{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 106, 255, 0.945);
+    text-align: center;
+}
+
+.active:active{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 106, 255, 0.945);
+    text-align: center;
+    border: 3px solid red;
+}
+
+.focus:focus{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 106, 255, 0.945);
+    text-align: center;
+    border: 3px solid red;
+}
+
+.link:link{
+    color: #ff0000;
+}
+
+.visited:visited{
+    color: rgb(4, 255, 0);
+}
+
+.box p{
+    display: inline-block;
+    color: black;
+    background-color: aqua;
+    border: 2px solid yellow;
+    width: 45px;
+    margin: 10px;
+}
+
+.box p:first-child, .box p:nth-child(5), .box p:last-child{
+    text-align: center;
+    width: 200px;
+    color: white;
+    background-color: #ff0000;
+}
+
+.pseudoElements::before{
+    content: ".pseudoElements::before ";
+    color: blue;
+}
+
+.pseudoElements::after{
+    content: " .pseudoElements::after";
+    color: rgb(255, 0, 0);
+}
+
+.shape{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    left: 25%;
+}
+
+.shape::before{
+    content: "before";
+    background-color: rgb(224, 245, 105);
+    width: 50px;
+    height: 20px;
+    border-radius: 10%;
+    top: 10px;
+    right: 70px;
+    text-align: center;
+    position: absolute;
+}
+
+.shape::after{
+    content: "after";
+    background-color: rgb(224, 245, 105);
+    width: 50px;
+    height: 20px;
+    border-radius: 10%;
+    bottom: 10px;
+    left: 70px;
+    text-align: center;
+    position: absolute;
+}
+
+.parent{
+    display: flex;
+    background-color: #ff0000;
+    gap: 10px;
+    justify-content: flex-end; /* flex-start(default); center; space-around; space-between; space-evenly*/
+}
+
+.child{
+    height: 50px;
+    width: 50px;
+    color: rgb(0, 0, 0);
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.child4{
+    flex: 2;
+    height: 50px;
+    width: 50px;
+    color: rgb(0, 0, 0);
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.demo1_div{
+    background-color: #1500ff85;
+}
+
+.vParent{
+    display: flex;
+    flex-direction: column;
+    background-color: #ff0000;
+}
+
+.responsiveParent{
+    display: flex;
+    background-color: #ff0000;
+    gap: 10px;
+    justify-content: flex-end; /* flex-start(default); center; space-around; space-between; space-evenly */
+    flex-wrap: wrap;
+}
+
+.fullyResponsiveParent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: red;
+}
+
+.submit{
+    background-color: purple;
+    color: white;
+    display: flex;
+    transition-delay: 0.5s;
+}
+
+.submit:hover{
+    background-color: rgb(47, 0, 255);
+}
+
+.animationButtonContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.delay{
+    display: flex;
+    background-color: purple;
+    color: white;
+    display: flex;
+    transition-delay: 1s;
+}
+
+.delay:hover{
+    background-color: rgb(47, 0, 255);
+}
+
+.duration {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.ease-in {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition-duration: 1s;
+    transition-timing-function: ease-in; /* ease-in: Starts slowly, speeds up */ /*Vice-versa: ease-in*/
+}
+
+.duration:hover, .ease-in:hover {
+    background-color: lightblue; /* Change to see the transition */
+}
+
+.box{
+    color: white;
+    background-color: black;
+    width: auto;
+    height: 500px;
+    border: 2px solid purple;
+}
+
+.ball {
+    color: white;
+    background-color: #ff0000;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center; /* centers vertically */
+}
+
+.ball:hover {
+    animation: ballMovement 5s ease-in-out forwards;
+}
+
+@keyframes ballMovement {
+    15%{
+        transform: translate(400px,0px);
+        
+    }
+    20%{
+        transform: translate(400px,-50px);
+    }
+    30%{
+        transform: translate(400px,400px);
+        background-color: #0800ff;
+    }
+    45%{
+        transform: translate(400px,250px);
+        
+        border-radius: 50%;
+    }
+    60%{
+        transform: translate(400px,400px);
+    }
+    75%{
+        transform: translate(400px,325px);
+        /* background-color: rgb(255, 255, 255); */
+        border-radius: 0%;
+    }
+    90%{
+        transform: translate(400px,400px);
+    }
+}
+
+.text{
+    position: relative;
+    left: 550px;
+}
+
+@media screen and (max-width: 800px){ /* It is neccessarly to put max width (800) above than 400 */
+    .media{
+        color: rgb(255, 255, 255);
+        background-color: black;
+    }
+}
+@media screen and (max-width: 400px){
+    .media{
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 26, 255);
+    }
+}
+
+.gridContainer_1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.gridContainer_2{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.gridContainer_3{
+    display: grid;
+    grid-template-columns: 200px 400px 600px;
+    grid-template-rows: 150px 100px;
+}
+
+.gridContainer_4{
+    display: grid;
+    grid-template: 200px 100px / repeat(3,1fr);
+}
+
+/***************************************/
+
+.gridProject{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "header_1 header_1 header_1"
+    "mainContent mainContent sideBar"
+    "footer footer footer";
+    grid-gap: 2px 2px;
+}
+
+.header{
+    grid-area: header_1; /* naming */
+    background-color: #0800ff72;
+}
+
+.mainContent{
+    grid-area: mainContent;
+    background-color: #ff000078;
+
+}
+
+.sideBar{
+    grid-area: sideBar;
+    background-color: rgba(0, 255, 255, 0.454);
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgba(210, 105, 30, 0.361);
+}
+
+/***************************************/
+
+.gridContainer_5{
+    display: grid;
+    grid-template: 200px 100px / repeat(3,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    /* grid-gap: 10px 10px; */
+}
+
+.gridContainer_6{
+    border: 1px solid black;
+    padding: 10px;
+    display: grid;
+    grid-template: 200px 100px / 300px 300px 300px;
+    justify-content: space-around;
+    align-content: end;
+    height: 450px;
+}
+
+.gridContainer_7{
+    border: 1px solid black;
+    padding: 10px;
+    display: grid;
+    grid-template: 200px 100px / 300px 300px 300px;
+    justify-items: space-around;
+    align-items: end;
+    height: 450px;
+}
+
+.gridContainer_8{
+    border: 1px solid black;
+    padding: 10px;
+    display: grid;
+    grid-template: 125px 125px / 300px 300px;
+    grid-auto-rows: 50px;
+    grid-auto-columns: 50px;
+    height: 450px;
+}
+
+.gridContainer_9{
+    padding: 10px;
+    display: grid;
+    border: 1px solid black;
+    grid-template: repeat(4,1fr)/repeat(2,1fr) ;
+    grid-auto-flow: column;
+}
+
+.gridContainer_10{
+    grid-gap: 3px 3px;
+    padding: 20px;
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: repeat(20,1fr); 
+}
+
+.gridContainer_10 .item-1{
+    background-color: #0800ff66;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 10;
+}
+
+.gridContainer_10 .item-2{
+    background-color: #fb00ff61;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gridContainer_10 .item-3{
+    background-color: #22ff0077;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 15;
+}
+
+.gridContainer_10 .item-4{
+    background-color: #ff000080;
+    grid-column: 2/4; /* OR */
+    grid-row: 10/20; 
+}
+
+.gridContainer_11{
+    grid-gap: 3px 3px;
+    padding: 20px;
+    display: grid;
+    border: 1px solid black;
+    grid-template: repeat(3,1fr)/repeat(2,1fr) ;
+
+}
+
+.gridContainer_11 .item-1{
+    background-color: #0800ff66;
+    order: 1;
+}
+
+.gridContainer_11 .item-2{
+    background-color: #fb00ff61;
+    order: 6;
+}
+
+.gridContainer_11 .item-3{
+    background-color: #22ff0077;
+    order: 2;
+}
+
+.gridContainer_11 .item-4{
+    background-color: #ff000080;
+    order: 3;
+}
+
+.gridContainer_11 .item-5{
+    background-color: #fbff0077;
+    order: 5;
+}
+
+.gridContainer_11 .item-6{
+    background-color: #00f2ff80;
+    order: 4;
+}
+
+.gridContainer_12{
+    grid-gap: 3px 3px;
+    padding: 20px;
+    display: grid;
+    border: 1px solid black;
+    grid-template: repeat(3,1fr)/repeat(3,1fr) ;
+    height: 50vh;
+
+}
+
+.gridContainer_12 .item-1{
+    background-color: #0800ff;
+    justify-self: center;
+}
+
+.gridContainer_12 .item-2{
+    background-color: #fb00ff;
+    justify-self: left;
+}
+
+.gridContainer_12 .item-3{
+    background-color: #22ff00;
+    justify-self: right;
+}
+
+.gridContainer_12 .item-4{
+    background-color: #ff0000;
+    align-self: center;
+}
+
+.gridContainer_12 .item-5{
+    background-color: #fbff00;
+    align-self: start;
+}
+
+.gridContainer_12 .item-6{
+    background-color: #00f2ff;
+    align-self: end;
+    justify-self: left;
+}
+
+.gridContainer_1 div, .gridContainer_2 div, .gridContainer_3 div, .gridContainer_4 div, .gridContainer_5 div,
+.gridContainer_6 div, .gridContainer_7 div, .gridContainer_8 div, .gridContainer_9 div, .gridContainer_10 div,
+.gridContainer_11 div, .gridContainer_12 div{
+    border: 1px solid black;
+}
+
+.container{
+    display: flex;
+}
+.card{
+    padding:23px 12px;
+    margin: 23px 12px;
+    border: 2px solid red;
+    background-color: rgba(0, 255, 255, 0.322);
+    box-shadow: 10px 13px yellow;
+    box-shadow: -10px -13px yellow;
+    box-shadow: -10px 13px yellow;
+    box-shadow: 10px -13px yellow;
+    box-shadow: 7px 5px 8px yellow; /*  blur radius */
+    box-shadow: 7px 5px 8px 13px yellow; /*  sprad radius */
+
+    box-shadow: inset -10px -13px yellow; /* inset for ander ki taraf shadow */
+
+    box-shadow: 3px 5px yellow, 6px 9px rgba(0, 0, 255, 0.323); /* multiple shadow  */
+}
+
+.card h2{
+    text-shadow: 3px 4px rgba(255, 0, 230, 0.454);
+    text-shadow: 3px 4px 4px rgba(255, 0, 230, 0.525);
+    /* all above box-shadow are applicable on box shadow */
+}
